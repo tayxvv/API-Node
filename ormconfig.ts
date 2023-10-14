@@ -11,7 +11,7 @@ export const connectionSource = new DataSource({
     synchronize: false,
     name: 'default',
     // entities: ['src/**/**.entity{.ts,.js}'],
-    migrations: ["./src/database/migrations/*.ts"],
+    migrations: ["./src/shared/infra/typeorm/*.ts"],
     // subscribers: ['src/subscriber/**/*{.ts,.js}'],
 });
 
@@ -22,8 +22,9 @@ export const connectionSource = new DataSource({
 //     "username": "postgres",
 //     "password": "@postgres",
 //     "database": "rentx",
-//     "migrations": ["./src/database/migrations/*.ts"],
+//     "migrations": ["./src/shared/infra/typeorm/migrations/*.ts"],
+//     "entities": ["./src/modules/**/entities/*.ts"],
 //     "cli": {
-//         "migrationsDir": "src/database/migrations"
+//         "migrationsDir": "src/shared/infra/typeorm/migrations"
 //     }
 // }
